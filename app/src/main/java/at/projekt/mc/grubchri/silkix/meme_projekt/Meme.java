@@ -2,18 +2,18 @@ package at.projekt.mc.grubchri.silkix.meme_projekt;
 
 public class Meme {
 
-    private  int ID;
+    private  String ID;
     private  String title;
     private  String text;
     private  String author;
     private  String url;
     private  boolean nsfw;
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
