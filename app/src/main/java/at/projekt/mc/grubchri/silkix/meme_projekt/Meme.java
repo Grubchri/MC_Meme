@@ -1,6 +1,8 @@
 package at.projekt.mc.grubchri.silkix.meme_projekt;
 
-public class Meme {
+import java.io.Serializable;
+
+public class Meme implements Serializable {
 
     private  String ID;
     private  String title;

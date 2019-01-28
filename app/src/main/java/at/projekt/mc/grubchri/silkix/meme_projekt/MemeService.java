@@ -33,12 +33,14 @@ public class MemeService {
 
             JsonNode node = objectMapper.readTree(in).get("data").get("children");
 
-            Meme m = new Meme();
+
             for (JsonNode fin : node){
+                Meme m = new Meme();
                 fin=fin.get("data");
                 System.out.println(fin.get("author_fullname").asText());
                 m.setAuthor(fin.get("author_fullname").asText());
                 m.setID(fin.get("id").asText());
+                m.setTitle(fin.get("title").asText());
                 m.setNsfw(fin.get("over_18").asBoolean());
                 m.setText(fin.get("selftext").asText());
                 m.setUrl(fin.get("url").asText());
