@@ -38,10 +38,18 @@ public class MemeService {
                 fin=fin.get("data");
                 System.out.println(fin.get("author_fullname").asText());
                 m.setAuthor(fin.get("author_fullname").asText());
+                m.setID(fin.get("id").asText());
+                m.setNsfw(fin.get("over_18").asBoolean());
+                m.setText(fin.get("selftext").asText());
+                m.setUrl(fin.get("url").asText());
+                memes.add(m);
             }
 
-            /*JsonNode node = objectMapper.readValue(in,JsonNode.class);
-            JSONArray jsonArray = new JSONArray(JsonNode);
+            /*
+
+            JsonNode node = objectMapper.readValue(in,JsonNode.class);
+
+            JSONArray jsonArray = new JSONArray(node);
             //Meme meme = node.get()
             /*Meme meme = objectMapper.readValue(json,Meme.class);
             meme.setAuthor(String.valueOf(objectMapper.readValue(json,Meme.class)));
